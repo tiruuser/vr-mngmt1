@@ -21,5 +21,10 @@ tasks.named('test') {
 	useJUnitPlatform()
 }
 
+task downloadFile(type: Download){
+	src 'https://triveja.jfrog.io/ui/repos/tree/General/testuser1-repo/vr-properties.txt'
+	dest buildDir()
+	overwrite true
+}
 
 
